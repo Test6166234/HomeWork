@@ -1,0 +1,18 @@
+{% extends "polls/base.html" %}
+
+{% block title %}Выполненные задачи{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Выполненные задачи</h1>
+
+{% for task in tasks %}
+<div class="card mb-3 task-card">
+    <div class="card-body">
+        <h5>✔ {{ task.title }}</h5>
+    </div>
+</div>
+{% empty %}
+    <p>Нет выполненных задач</p>
+{% endfor %}
+
+{% endblock %}

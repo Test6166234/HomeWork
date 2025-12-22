@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Задачи{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'tasks_list' %}">Все задачи</a> |
+        <a href="{% url 'completed_tasks' %}">Выполненные</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
